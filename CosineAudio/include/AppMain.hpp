@@ -1,4 +1,5 @@
-#include "AppMeta.hpp"
+#pragma once
+#include <wx/app.h>
 
 class CosineAudio : public wxApp
 {

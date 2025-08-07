@@ -15,21 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\AppMain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MainWindow.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="include\MainWindow.hpp">
+    <ClInclude Include="include\AppData.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\MusicWindow.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\AppMeta.hpp">
+    <ClInclude Include="include\MainFrame.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\AppMain.hpp">
@@ -37,6 +26,15 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="assets\CosineAudio.xpm" />
+    <ClCompile Include="src\MainFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AppMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\exitButton.xpm" />
+    <None Include="assets\minButton.xpm" />
   </ItemGroup>
 </Project>

@@ -19,17 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\AppMain.cpp" />
-    <ClCompile Include="src\MainWindow.cpp" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClInclude Include="include\AppData.hpp" />
     <ClInclude Include="include\AppMain.hpp" />
-    <ClInclude Include="include\AppMeta.hpp" />
-    <ClInclude Include="include\MainWindow.hpp" />
-    <ClInclude Include="include\MusicWindow.hpp" />
+    <ClInclude Include="include\MainFrame.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="assets\CosineAudio.xpm" />
+    <ClCompile Include="src\AppMain.cpp" />
+    <ClCompile Include="src\MainFrame.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\exitButton.xpm" />
+    <None Include="assets\minButton.xpm" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -90,6 +90,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\Libraries\wxWidgets-3.2.6\include;D:\Libraries\wxWidgets-3.2.6\include\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -106,6 +107,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\Libraries\wxWidgets-3.2.6\include;D:\Libraries\wxWidgets-3.2.6\include\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

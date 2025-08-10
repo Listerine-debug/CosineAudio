@@ -1,26 +1,27 @@
-#include "../include/AppMain.hpp"
-#include "../include/AppData.hpp"
-#include "../include/MainFrame.hpp"
+/*
+* File Name: appMain.cpp
+* Program Name: CosineAudio
+* Author: Matteo Washington
+* License: MIT
+*
+*/
 
-wxDECLARE_APP(CosineAudio);
-wxIMPLEMENT_APP(CosineAudio);
+#include "../include/appMain.hpp"
+#include "../include/appCore.hpp"
+#include "../include/appFrame.hpp"
+
+DECLARE_APP(CosineAudio);
+IMPLEMENT_APP(CosineAudio);
 
 bool CosineAudio::OnInit()
 {
-	if (AppData::OS == "Windows")
+	if (appMeta::PLATFORM == "Windows")
 	{
-		MainFrame* frame = new MainFrame(AppData::NAME);
+		appFrame* frame = new appFrame(wxT(""));
 		frame->Show(true);
 		return true;
 	}
-	else
-	{
-		wxMessageBox
-		(
-			wxString(AppData::OS) + " is not supported",
-			"Runtime Error", 
-			wxOK | wxICON_ERROR
-		);
-		return false;
-	}
+	wxMessageBox(wxString(appMeta::PLATFORM) + " is not supported",
+		"Error", wxOK | wxICON_ERROR);
+	return false;
 }

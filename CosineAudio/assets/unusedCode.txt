@@ -1,0 +1,54 @@
+// ====== FROM appFrame.cpp =======
+/*musicSearchText = new wxTextCtrl
+	(
+		menuLeft,
+		wxUSE_TEXTCTRL,
+		wxEmptyString,
+		wxPoint(25, 25),
+		wxSize(225, 20),
+		wxTE_NO_VSCROLL | wxTE_RICH
+	);
+
+	musicSearchText->SetFont(font);
+	musicSearchText->SetBackgroundColour(wxColor(12, 12, 16));
+	musicSearchText->SetForegroundColour(*wxWHITE);
+
+	/*musicSearch = new wxButton
+	(
+		menuLeft,
+		wxID_ANY,
+		"",
+		wxPoint(250, 23),
+		wxSize(25, 25)
+	);
+
+	//musicSearch->SetFont(font);
+	//musicSearch->SetForegroundColour(*wxWHITE);
+	//musicSearch->SetBackgroundColour(wxColor(12, 12, 16));
+
+	musicLibrary = new wxButton
+	(
+		menuLeft,
+		wxID_ANY,
+		"Music Library",
+		wxPoint(50, 75),
+		wxSize(200, 25)
+	);
+
+	musicLibrary->SetFont(font);
+	musicLibrary->SetForegroundColour(*wxWHITE);
+	musicLibrary->SetBackgroundColour(wxColor(12, 12, 16));
+
+	musicPlaylist = new wxButton
+	(
+		menuLeft,
+		wxID_ANY,
+		"Playlists",
+		wxPoint(50, 100),
+		wxSize(200, 25)
+	);
+
+	musicPlaylist->SetFont(font);
+	musicPlaylist->SetForegroundColour(*wxWHITE);
+	musicPlaylist->SetBackgroundColour(wxColor(12, 12, 16));*/
+// =============

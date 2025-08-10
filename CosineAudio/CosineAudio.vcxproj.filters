@@ -15,26 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\AppData.hpp">
+    <ClInclude Include="include\appCore.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\MainFrame.hpp">
+    <ClInclude Include="include\appMain.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\AppMain.hpp">
+    <ClInclude Include="include\appFrame.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\MainFrame.cpp">
+    <ClCompile Include="src\appMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\AppMain.cpp">
+    <ClCompile Include="src\appFrame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="assets\exitButton.xpm" />
-    <None Include="assets\minButton.xpm" />
+    <Text Include="assets\unusedCode.txt" />
   </ItemGroup>
 </Project>

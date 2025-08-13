@@ -75,13 +75,22 @@ appFrame::appFrame(const wxString& title)
 	(
 		this,
 		wxID_ANY,
-		wxPoint(300, 500),
+		wxPoint(250, 500),
 		wxSize(900, 100)
+	);
+
+	musicIcon = new wxPanel
+	(
+		musicRight,
+		wxID_ANY,
+		wxPoint(300, 50),
+		wxSize(300, 300)
 	);
 
 	menuLeft->SetBackgroundColour(wxColor(12, 12, 16));
 	musicRight->SetBackgroundColour(wxColor(12, 12, 16));
 	musicBottom->SetBackgroundColour(wxColor(12, 12, 16));
+	musicIcon->SetBackgroundColour(wxColor(90, 90, 90));
 
 
 	mainSizer = new wxBoxSizer(wxHORIZONTAL);
@@ -111,4 +120,50 @@ appFrame::appFrame(const wxString& title)
 		appMeta::FONT,
 		wxFONTENCODING_DEFAULT
 	);
+
+	fileTree = new wxTreeCtrl
+	(
+		menuLeft,
+		wxID_ANY,
+		wxPoint(10, 50),
+		wxSize(280, appMeta::FRAME_HEIGHT-70),
+		wxTR_HAS_BUTTONS | wxTR_FULL_ROW_HIGHLIGHT | wxTR_NO_LINES
+	);
+
+	fileTree->SetBackgroundColour(wxColor(90, 90, 90));
+	fileTree->SetFont(font);
+
+	Browse = new wxButton
+	(
+		menuLeft,
+		wxID_ANY,
+		"Browse",
+		wxPoint(25, 10),
+		wxSize(250, 25)
+	);
+
+	Browse->SetFont(font);
+	Browse->SetBackgroundColour(wxColor(12, 12, 16));
+	Browse->SetForegroundColour(wxColor(*wxWHITE));
+	Browse->Bind(wxEVT_BUTTON, &appFrame::OnBrowse, this, wxID_ANY);
+
+	// fileTree test code
+	// wxTreeItemId rootId = fileTree->AddRoot("Root");
+	// fileTree->AppendItem(rootId, "Node 1");
+	// fileTree->AppendItem(rootId, "Node 2");
+}
+
+void appFrame::OnBrowse(wxCommandEvent& event)
+{
+	wxDir my_dir;
+	wxString defaultPath = wxT("/");
+	wxDirDialog dialog(menuLeft, wxT("Choose Music Folder"),
+		defaultPath, wxDD_NEW_DIR_BUTTON);
+
+	if (dialog.ShowModal() == wxID_OK)
+	{
+		wxString path = dialog.GetPath();
+		wxMessageBox(path);
+	}
+	//wxMessageBox("Pressed Browse", "Info", wxOK | wxICON_INFORMATION);
 }
